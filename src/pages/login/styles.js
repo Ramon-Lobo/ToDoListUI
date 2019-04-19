@@ -40,5 +40,5 @@ export default StyleSheet.create({
     fontWeight: '100',
     position: 'absolute',
     bottom: 30,
-  }
+  },
 });

@@ -13,9 +13,9 @@ export default {
     dark: 'rgba(130, 130, 130, 1)',
   },
 
-  items: {
-    red: 'rgba(205, 101, 101, 1)',
-    yellow: 'rgba(255, 221, 0, 1)',
-    green: 'rgba(101, 232, 101, 1)',
+  priority: {
+    high: 'rgba(205, 101, 101, 1)',
+    medium: 'rgba(255, 221, 0, 1)',
+    low: 'rgba(101, 232, 101, 1)',
   },
 };

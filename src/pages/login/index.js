@@ -5,6 +5,10 @@ import { colors } from '~/styles';
 import styles from './styles';
 
 export default class Login extends Component {
+  static navigationOptions = {
+    header: null,
+  }
+
   state = {};
 
   render() {
