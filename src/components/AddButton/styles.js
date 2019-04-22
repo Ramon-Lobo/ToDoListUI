@@ -2,6 +2,7 @@ import { colors } from '~/styles';
 
 export default {
   button: {
+    flex: 1,
     backgroundColor: colors.primary,
     height: 70,
     width: 70,
@@ -13,13 +14,10 @@ export default {
     position: 'absolute',
   },
 
-  buttonText: {
-    flex: 1,
+  plusIcon: {
     color: colors.white,
-    // backgroundColor: '#000',
-    // borderRadius: ,
-    fontSize: 50,
-    // lineHeight: 50,
-    textAlignVertical: 'center',
+    fontFamily: 'Montserrat-Regular',
+    marginTop: 5,
+    fontSize: 40,
   },
 };

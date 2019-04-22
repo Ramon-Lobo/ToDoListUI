@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
 import { StatusBar } from 'react-native';
 
-import colors from './styles/colors';
-
 import Routes from './routes';
 
+import colors from './styles/colors';
 
 const App = () => {
   return (

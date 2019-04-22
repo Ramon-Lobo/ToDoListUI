@@ -38,12 +38,14 @@ export default {
   taskId: {
     fontSize: 12,
     color: colors.gray.dark,
+    fontFamily: 'Montserrat-Regular',
   },
 
   taskTitle: {
     fontSize: 18,
     color: colors.gray.dark,
     fontWeight: 'bold',
+    fontFamily: 'Montserrat-Medium',
   },
 
   deadlineTextContainer: {
@@ -56,12 +58,14 @@ export default {
     fontSize: 14,
     color: colors.gray.dark,
     textAlign: 'center',
+    fontFamily: 'Montserrat-Regular',
   },
 
   deadlineDateTime: {
     fontSize: 12,
     color: colors.gray.dark,
     textAlign: 'center',
+    fontFamily: 'Montserrat-Regular',
   },
   // //
 };

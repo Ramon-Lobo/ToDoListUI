@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import {
+  View,
+  TextInput,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
+import { SafeAreaView, StackActions, NavigationActions } from 'react-navigation';
+import PropTypes from 'prop-types';
+
+import Logo from '~/assets/svg/logo.svg';
 
 import { colors } from '~/styles';
 import styles from './styles';
@@ -9,32 +18,52 @@ export default class Login extends Component {
     header: null,
   }
 
-  state = {};
+  moveToMainTab = () => {
+    const { navigation } = this.props;
+    const action = StackActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName: 'MainTab' })],
+    });
+
+    navigation.dispatch(action);
+  }
 
   render() {
     return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          placeholder="Login"
-          placeholderTextColor={colors.whiteTransparent}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          placeholderTextColor={colors.whiteTransparent}
-          secureTextEntry
-        />
+      <SafeAreaView style={styles.container}>
+        <View style={styles.loginFormContainer}>
+          <Logo width={styles.logo.width} height={styles.logo.height} style={styles.logo} />
+          <TextInput
+            style={styles.input}
+            placeholder="Login"
+            autoCapitalize="none"
+            placeholderTextColor={colors.whiteTransparent}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            placeholderTextColor={colors.whiteTransparent}
+            secureTextEntry
+          />
 
-        <TouchableOpacity
-          style={styles.btn}
-          activeOpacity={0.8}
-        >
-          <Text style={styles.btnText}>Enter</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.btn}
+            activeOpacity={0.8}
+            onPress={() => this.moveToMainTab()}
+          >
+            <Text style={styles.btnText}>Enter</Text>
+          </TouchableOpacity>
+        </View>
 
-        <Text style={styles.bottomText}>Dont have account</Text>
-      </View>
+        {/* Account Container */}
+        <View style={styles.bottomTextContainer}>
+          <Text style={styles.bottomText}>Dont have account</Text>
+        </View>
+      </SafeAreaView>
     );
   }
 }
+
+Login.propTypes = {
+  navigation: PropTypes.shape({}).isRequired,
+};

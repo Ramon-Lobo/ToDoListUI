@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '~/styles';
+import { colors, metrics } from '~/styles';
 
 export default StyleSheet.create({
   container: {
@@ -7,6 +7,30 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.primary,
+  },
+
+  scroll: {
+    flex: 9,
+  },
+
+  scrollContentContainer: {
+    flex: 9,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: metrics.screenWidth,
+  },
+
+  loginFormContainer: {
+    flex: 9,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+
+  logo: {
+    width: 200,
+    height: 200,
+    marginBottom: 20,
   },
 
   input: {
@@ -17,6 +41,8 @@ export default StyleSheet.create({
     fontSize: 24,
     color: colors.white,
     marginTop: 20,
+    paddingLeft: 10,
+    fontFamily: 'Montserrat-Regular',
   },
 
   btn: {
@@ -34,11 +60,15 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
 
+  bottomTextContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 10,
+  },
+
   bottomText: {
     color: colors.white,
     fontSize: 20,
     fontWeight: '100',
-    position: 'absolute',
-    bottom: 30,
   },
 });

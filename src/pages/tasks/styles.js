@@ -16,6 +16,7 @@ export default {
     fontSize: 24,
     color: colors.gray.dark,
     fontWeight: 'bold',
+    fontFamily: 'Montserrat-Bold',
   },
 
   separator: {

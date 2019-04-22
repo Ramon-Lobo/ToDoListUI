@@ -3,6 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 
 // Custom components
+import NewTaskModal from '~/components/NewTaskModal';
 import Task from '~/components/Task';
 import AddButton from '~/components/AddButton';
 
@@ -12,6 +13,10 @@ import list from './mockData';
 import styles from './styles';
 
 export default class Tasks extends Component {
+  state = {
+    isModalVisible: false,
+  };
+
   footer = () => (
     <View style={styles.footer} />
   );
@@ -24,7 +29,13 @@ export default class Tasks extends Component {
     <Task id={item.id} title={item.title} image={item.image} priority={item.priority} />
   );
 
+  toggleModal = () => {
+    const { isModalVisible } = this.state;
+    this.setState({ isModalVisible: !isModalVisible });
+  }
+
   render() {
+    const { isModalVisible } = this.state;
     return (
       <SafeAreaView style={styles.container} forceInset>
         {/* Title View */}
@@ -38,7 +49,9 @@ export default class Tasks extends Component {
           ItemSeparatorComponent={this.separator}
           ListFooterComponent={this.footer}
         />
-        <AddButton />
+        <AddButton onPress={() => this.toggleModal()} />
+
+        <NewTaskModal isVisible={isModalVisible} toggleFunc={this.toggleModal} />
       </SafeAreaView>
     );
   }

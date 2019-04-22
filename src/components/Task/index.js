@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const Task = ({ id, title, image, priority }) => (
+const Task = ({
+  id,
+  title,
+  image,
+  priority,
+}) => (
   <View>
     {/* Task Cell */}
     <View style={styles.taskCell(priority)}>
