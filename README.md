@@ -39,7 +39,7 @@ react-native run-android
 react-native run-ios
 ```
 ### External libraries used in this project  
-- [react-navigation]([https://link](https://github.com/react-navigation/react-navigation))
+- [react-navigation](https://github.com/react-navigation/react-navigation)
 - [react-native-modal](https://github.com/react-native-community/react-native-modal)
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer)
