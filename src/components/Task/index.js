@@ -9,6 +9,8 @@ const Task = ({
   title,
   image,
   priority,
+  deadlineDate,
+  deadlineTime,
 }) => (
   <View>
     {/* Task Cell */}
@@ -35,7 +37,7 @@ const Task = ({
       {/* Deadline Text Container */}
       <View style={styles.deadlineTextContainer}>
         <Text style={styles.deadlineText}>Deadline</Text>
-        <Text style={styles.deadlineDateTime}>20/04 21:30</Text>
+        <Text style={styles.deadlineDateTime}>{`${deadlineDate} ${deadlineTime}`}</Text>
       </View>
     </View>
   </View>
@@ -46,6 +48,8 @@ Task.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   priority: PropTypes.string.isRequired,
+  deadlineDate: PropTypes.string.isRequired,
+  deadlineTime: PropTypes.string.isRequired,
 };
 
 export default Task;

@@ -26,7 +26,14 @@ export default class Tasks extends Component {
   );
 
   renderItem = ({ item }) => (
-    <Task id={item.id} title={item.title} image={item.image} priority={item.priority} />
+    <Task
+      id={item.id}
+      title={item.title}
+      image={item.image}
+      priority={item.priority}
+      deadlineDate={item.deadlineDate}
+      deadlineTime={item.deadlineTime}
+    />
   );
 
   toggleModal = () => {

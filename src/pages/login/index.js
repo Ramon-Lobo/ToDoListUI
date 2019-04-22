@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
   View,
+  Text,
   TextInput,
   TouchableOpacity,
-  Text,
 } from 'react-native';
 import { SafeAreaView, StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
@@ -57,7 +57,9 @@ export default class Login extends Component {
 
         {/* Account Container */}
         <View style={styles.bottomTextContainer}>
-          <Text style={styles.bottomText}>Dont have account</Text>
+          <TouchableOpacity>
+            <Text style={styles.bottomText}>{'Don\'t have account'}</Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     );

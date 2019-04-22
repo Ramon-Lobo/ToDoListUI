@@ -69,6 +69,7 @@ export default StyleSheet.create({
   bottomText: {
     color: colors.white,
     fontSize: 20,
-    fontWeight: '100',
+    fontWeight: '300',
+    textDecorationLine: 'underline',
   },
 });
